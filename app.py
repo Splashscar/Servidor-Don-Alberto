@@ -8,7 +8,7 @@ peritajes = []
 @app.route('/api/registros', methods=['GET'])
 def registros():
 	return jsonify({
-	  "status": "online",
+	  "status": "SERVIDOR PRINCIPAL",
 	  "servidor": "Ubuntu de Mendieta:",
 	  "hora_servidor": str(datetime.datetime.now()),
 	  "inventario": ["Buhias de Iridio", "Refrigerannte","Transistores","Filtro de aceite", "Aceite motul 7100"]
