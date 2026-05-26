@@ -8,7 +8,7 @@ peritajes = []
 @app.route('/api/registros', methods=['GET'])
 def registros():
 	return jsonify({
-	  "status": "online",
+	  "status": "SERVIDOR PRINCIAL - Inventario en mantenimiento",
 	  "servidor": "Ubuntu de Mendieta:",
 	  "hora_servidor": str(datetime.datetime.now()),
 	  "inventario": ["Buhias de Iridio", "Refrigerannte","Transistores","Filtro de aceite", "Aceite motul 7100"]
@@ -35,4 +35,15 @@ def ver_peritajes():
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=5000, debug=True)
 
+@app.route('/api/inventario', methods=['GET'])
+def inventario():
 
+    return jsonify({
+        "repuestos": [
+            "Bujias NGK",
+            "Aceite para motor",
+            "Pastillas de freno",
+            "Filtro de aire"
+        ],
+        "estado": "En desarrollo"
+    })
