@@ -35,4 +35,15 @@ def ver_peritajes():
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=5000, debug=True)
 
+@app.route('/api/inventario', methods=['GET'])
+def inventario():
 
+    return jsonify({
+        "repuestos": [
+            "Bujias NGK",
+            "Aceite para motor",
+            "Pastillas de freno",
+            "Filtro de aire"
+        ],
+        "estado": "En desarrollo"
+    })
