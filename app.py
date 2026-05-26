@@ -11,7 +11,7 @@ def registros():
 	  "status": "online",
 	  "servidor": "Ubuntu de Mendieta:",
 	  "hora_servidor": str(datetime.datetime.now()),
-	  "inventario": ["Buhias de Iridio", "Filtro de aceite", "Aceite motul 7100"]
+	  "inventario": ["Buhias de Iridio", "Refrigerannte","Transistores","Filtro de aceite", "Aceite motul 7100"]
 	})
 
 @app.route('/api/peritajes', methods=['POST'])
