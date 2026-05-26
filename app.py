@@ -17,7 +17,7 @@ def registros():
 @app.route('/api/peritajes', methods=['POST'])
 def guardar_peritajes():
 	data= request.json
-	placa=data.get("placa")
+	placa=data.get("placa").upper()
 	peritajes.append(placa)
 
 	return jsonify({
